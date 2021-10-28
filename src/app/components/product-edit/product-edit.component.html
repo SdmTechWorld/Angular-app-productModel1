@@ -1,0 +1,44 @@
+<div *ngIf="productFormGroup" class="container row py-5">
+  <div class="col-md-6 offset-md-3">
+    <form [formGroup]="productFormGroup">
+
+      <div class="mb-3">
+        <input class="form-control" formControlName="id" type="hidden">
+      </div>
+
+      <div class="mb-3">
+        <label>Name</label>
+        <input [ngClass]="{'is-invalid':submitted && productFormGroup.controls.name.errors}" class="form-control"
+               formControlName="name"
+               type="text">
+        <div *ngIf="submitted && productFormGroup.controls.name.errors" class="invalid-feedback">
+          <div *ngIf="productFormGroup.controls.name.errors.required">Name is required</div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label>price</label>
+        <input [ngClass]="{'is-invalid':submitted && productFormGroup.controls.price.errors}" class="form-control"
+               formControlName="price"
+               type="text">
+        <div *ngIf="submitted && productFormGroup.controls.price.errors" class="invalid-feedback">
+          <div *ngIf="submitted && productFormGroup.controls.price.errors.required">Price is required</div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label>Quantity</label>
+        <input class="form-control" formControlName="quantity" type="text">
+      </div>
+      <div class="mb-3">
+        <label>Seleted</label>
+        <input class="form-check" formControlName="selected" type="checkbox">
+      </div>
+      <div class="mb-3">
+        <label>Available</label>
+        <input class="form-check" formControlName="available" type="checkbox">
+      </div>
+      <button (click)="OnSaveUpdate()" class="btn-success">Update</button>
+    </form>
+  </div>
+</div>
+

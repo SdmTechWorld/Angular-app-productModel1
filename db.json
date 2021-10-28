@@ -1,0 +1,44 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "computer",
+      "price": 4300,
+      "quantity": 600,
+      "selected": true,
+      "available": true
+    },
+    {
+      "id": 2,
+      "name": "printer",
+      "price": 2300,
+      "quantity": 300,
+      "selected": false,
+      "available": true
+    },
+    {
+      "name": "tablette",
+      "price": "10",
+      "quantity": "2",
+      "selected": false,
+      "available": true,
+      "id": 3
+    },
+    {
+      "name": "Ecouters",
+      "price": "20",
+      "quantity": "10",
+      "selected": false,
+      "available": false,
+      "id": 4
+    },
+    {
+      "id": 5,
+      "name": "Imprimante",
+      "price": "1000",
+      "quantity": "20",
+      "selected": false,
+      "available": true
+    }
+  ]
+}
